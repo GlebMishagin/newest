@@ -675,13 +675,13 @@ class _BuyWindowDesktopState extends State<BuyWindowDesktop> {
                             String stock() {
                               String stock = '';
                               if (selectedTerminal != null) {
-                                terminalList.forEach((terminal) {
+                                for (var terminal in terminalList) {
                                   if (terminal.length > 4 &&
                                       terminal[3] == selectedTerminal) {
                                     stock = terminal[
                                         4]; // Записываем значение пятого элемента, если четвертый элемент равен selectedTerminal
                                   }
-                                });
+                                }
                               }
                               return stock;
                             }
@@ -690,23 +690,23 @@ class _BuyWindowDesktopState extends State<BuyWindowDesktop> {
                               String terminalStorage = ' ';
                               if (selectedTerminal != null &&
                                   selectedType == '20DC') {
-                                terminalList.forEach((terminal) {
+                                for (var terminal in terminalList) {
                                   if (terminal.length > 12 &&
                                       terminal[3] == selectedTerminal) {
                                     // Проверяем только совпадение терминала
                                     terminalStorage = terminal[
                                         12]; // Подтягиваем девятый элемент
                                   }
-                                });
+                                }
                               } else if (selectedTerminal != null &&
                                   selectedType == '40HC') {
-                                terminalList.forEach((terminal) {
+                                for (var terminal in terminalList) {
                                   if (terminal.length > 13 &&
                                       terminal[3] == selectedTerminal) {
                                     // Проверяем только совпадение терминала
                                     terminalStorage = terminal[13];
                                   }
-                                });
+                                }
                               }
                               return terminalStorage;
                             }
@@ -715,23 +715,23 @@ class _BuyWindowDesktopState extends State<BuyWindowDesktop> {
                               String prr = ' ';
                               if (selectedTerminal != null &&
                                   selectedType == '20DC') {
-                                terminalList.forEach((terminal) {
+                                for (var terminal in terminalList) {
                                   if (terminal.length > 10 &&
                                       terminal[3] == selectedTerminal) {
                                     // Проверяем только совпадение терминала
                                     prr = terminal[
                                         10]; // Подтягиваем девятый элемент
                                   }
-                                });
+                                }
                               } else if (selectedTerminal != null &&
                                   selectedType == '40HC') {
-                                terminalList.forEach((terminal) {
+                                for (var terminal in terminalList) {
                                   if (terminal.length > 11 &&
                                       terminal[3] == selectedTerminal) {
                                     // Проверяем только совпадение терминала
                                     prr = terminal[11];
                                   }
-                                });
+                                }
                               }
                               return prr;
                             }
@@ -740,7 +740,7 @@ class _BuyWindowDesktopState extends State<BuyWindowDesktop> {
                               String izderzhki = ' ';
                               if (selectedTerminal != null &&
                                   selectedType == '20DC') {
-                                terminalList.forEach((terminal) {
+                                for (var terminal in terminalList) {
                                   if (terminal.length > 15 &&
                                       terminal[3] == selectedTerminal) {
                                     // Проверяем только совпадение терминала
@@ -748,10 +748,10 @@ class _BuyWindowDesktopState extends State<BuyWindowDesktop> {
                                             int.parse(terminal[12]))
                                         .toString(); // Подтягиваем девятый элемент
                                   }
-                                });
+                                }
                               } else if (selectedTerminal != null &&
                                   selectedType == '40HC') {
-                                terminalList.forEach((terminal) {
+                                for (var terminal in terminalList) {
                                   if (terminal.length > 15 &&
                                       terminal[3] == selectedTerminal) {
                                     // Проверяем только совпадение терминала
@@ -759,7 +759,7 @@ class _BuyWindowDesktopState extends State<BuyWindowDesktop> {
                                             int.parse(terminal[13]))
                                         .toString();
                                   }
-                                });
+                                }
                               }
                               return izderzhki;
                             }
@@ -768,7 +768,7 @@ class _BuyWindowDesktopState extends State<BuyWindowDesktop> {
                               String sebes = ' ';
                               if (selectedTerminal != null &&
                                   selectedType == '20DC') {
-                                terminalList.forEach((terminal) {
+                                for (var terminal in terminalList) {
                                   if (terminal.length > 15 &&
                                       terminal[3] == selectedTerminal) {
                                     // Проверяем только совпадение терминала
@@ -777,10 +777,10 @@ class _BuyWindowDesktopState extends State<BuyWindowDesktop> {
                                             int.parse(priceController.text))
                                         .toString(); // Подтягиваем девятый элемент
                                   }
-                                });
+                                }
                               } else if (selectedTerminal != null &&
                                   selectedType == '40HC') {
-                                terminalList.forEach((terminal) {
+                                for (var terminal in terminalList) {
                                   if (terminal.length > 15 &&
                                       terminal[3] == selectedTerminal) {
                                     // Проверяем только совпадение терминала
@@ -789,7 +789,7 @@ class _BuyWindowDesktopState extends State<BuyWindowDesktop> {
                                             int.parse(priceController.text))
                                         .toString();
                                   }
-                                });
+                                }
                               }
                               return sebes;
                             }
